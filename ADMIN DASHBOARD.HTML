@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard</title>
+</head>
+<body style="background-image: url('ADMIN BACKGROUND.png');">
+
+  <h1 fontcolor="red">Admin Dashboard</h1>
+
+  <br>
+
+  <h2>Upload Course Material</h2>
+  <form action="upload-course-handler.html" method="post" enctype="multipart/form-data">
+    <label for="courseName">Course Name:</label><br>
+    <input type="text" id="courseName" name="courseName"><br><br>
+
+    <label for="courseFile">Select Course File:</label><br>
+    <input type="file" id="courseFile" name="courseFile"><br><br>
+
+    <input type="submit" value="Upload Course">
+  </form>
+
+  <br>
+
+  <h2>Quick Links</h2>
+  <ul>
+    <li><a href="upload-course-handler.html">Upload New Course</a></li>
+    <li><a href="trainee-list.html">View All Trainees</a></li>
+    <li><a href="course-list.html">View All Courses</a></li>
+    <li><a href="reports.html">Generate Reports</a></li>
+  </ul>
+
+</body>
+</html>

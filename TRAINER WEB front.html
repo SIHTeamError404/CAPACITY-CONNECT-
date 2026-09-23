@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Trainer Dashboard</title>
+</head>
+<body style="background-image: url('trainer and trainee web background.png');">
+
+  <h1>Trainer Dashboard</h1>
+
+  <h2>Overview</h2>
+  <table border="1" cellpadding="8" cellspacing="0">
+    <tr><td>Total Courses</td><td>10</td></tr>
+    <tr><td>Total Learners</td><td>2</td></tr>
+    <tr><td>Active Courses</td><td>4</td></tr>
+    <tr><td>Completed Courses</td><td>0</td></tr>
+  </table>
+
+  <h2>Quick Actions</h2>
+  <ul>
+    <li><a href="create-course.html">Create New Course</a></li>
+    <li><a href="content-manager.html">Manage Course Content</a></li>
+    <li><a href="quiz-manager.html">Manage Quizzes</a></li>
+    <li><a href="announcements.html">Post Announcement</a></li>
+    <li><a href="ai-assistant.html">Open AI Assistant</a></li>
+  </ul>
+
+  <hr>
+
+  <h2>My Courses</h2>
+  <table border="1" cellpadding="8" cellspacing="0">
+    <thead>
+      <tr>
+        <th>Course Name</th>
+        <th>Description</th>
+        <th>Learners</th>
+        <th>Progress</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Web Development</td>
+        <td>HTML, CSS and JS basics</td>
+        <td>0</td>
+        <td>0%</td>
+        <td><a href="manage-course.html">Edit / Manage</a></td>
+      </tr>
+      <tr>
+        <td>Data Analytics</td>
+        <td>Intro to data analysis</td>
+        <td>0</td>
+        <td>0%</td>
+        <td><a href="manage-course.html">Edit / Manage</a></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <hr>
+
+  <h2>Create Course</h2>
+  <form action="create-course-handler.html" method="post" enctype="multipart/form-data">
+    <label for="title">Course Title:</label>
+    <input type="text" id="title" name="title"><br><br>
+
+    <label for="desc">Description:</label>
+    <textarea id="desc" name="desc" rows="3" cols="40"></textarea><br><br>
+
+    <label for="level">Difficulty:</label>
+    <select id="level" name="level">
+      <option>Beginner</option>
+      <option>Intermediate</option>
+      <option>Advanced</option>
+    </select><br><br>
+
+    <label for="thumb">Thumbnail:</label>
+    <input type="file" id="thumb" name="thumb"><br><br>
+
+    <input type="submit" value="Create Course">
+  </form>
+
+  <hr>
+
+  <h2>Course Content Manager</h2>
+  <p>
+    <a href="content-manager.html">Add Modules / Lessons</a> |
+    <a href="content-manager.html">Upload PDFs / Videos</a> |
+    <a href="content-manager.html">Add Quizzes</a> |
+    <a href="reorder-lessons.html">Reorder Lessons</a>
+  </p>
+
+  <hr>
+
+  <h2>Learners</h2>
+  <table border="1" cellpadding="8" cellspacing="0">
+    <thead>
+      <tr>
+        <th>Learner Name</th>
+        <th>Enrollment Date</th>
+        <th>Progress</th>
+        <th>Quiz Score</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Rahul Sharma</td>
+        <td>01-Jan-2026</td>
+        <td>0%</td>
+        <td>0%</td>
+        <td>In Progress</td>
+      </tr>
+      <tr>
+        <td>Priya Verma</td>
+        <td>15-Feb-2026</td>
+        <td>0%</td>
+        <td>0%</td>
+        <td>In Progress</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <hr>
+
+  <h2>Analytics</h2>
+  <table border="1" cellpadding="8" cellspacing="0">
+    <tr><td>Course Completion Rate</td><td>0%</td></tr>
+    <tr><td>Average Quiz Score</td><td>0%</td></tr>
+    <tr><td>Active Learners</td><td>0</td></tr>
+    <tr><td>Most Popular Course</td><td>Web Development</td></tr>
+  </table>
+
+  <hr>
+
+  <h2>Quiz Manager</h2>
+  <p>
+    <a href="quiz-manager.html">Create Question</a> |
+    <a href="quiz-manager.html">Edit Questions</a> |
+    <a href="quiz-manager.html">Delete Questions</a>
+  </p>
+
+  <hr>
+
+  <h2>Announcements</h2>
+  <form action="announcements-handler.html" method="post">
+    <label for="atitle">Title:</label>
+    <input type="text" id="atitle" name="atitle"><br><br>
+
+    <label for="amsg">Message:</label>
+    <textarea id="amsg" name="amsg" rows="3" cols="40"></textarea><br><br>
+
+    <input type="submit" value="Post Announcement">
+  </form>
+
+  <hr>
+
+  <h2>AI Assistant</h2>
+  <label for="Document">Document:</label>
+    <input type="file" id="Document" name="Document"><br><br>
+  <ul>
+    <li><a href="ai-assistant.html">Generate Quiz Questions</a></li>
+    <li><a href="ai-assistant.html">Generate Course Summary</a></li>
+    <li><a href="ai-assistant.html">Suggest Learning Objectives</a></li>
+  </ul>
+
+  <hr>
+
+  <h2>Trainer Profile & Settings</h2>
+  <form action="profile-handler.html" method="post" enctype="multipart/form-data">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name"><br><br>
+
+    <label for="photo">Profile Photo:</label>
+    <input type="file" id="photo" name="photo"><br><br>
+
+    <label for="expertise">Expertise:</label>
+    <input type="text" id="expertise" name="expertise"><br><br>
+
+    <input type="submit" value="Save Settings">
+  </form>
+
+</body>
+</html>
